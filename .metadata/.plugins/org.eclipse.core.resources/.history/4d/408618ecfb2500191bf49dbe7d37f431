@@ -1,0 +1,14 @@
+package com.zy.along;
+
+import java.util.ArrayList;
+
+public class GenericTest {
+
+	public static void main(String[] args) throws Exception {
+		ArrayList<Integer> collection3 = new ArrayList<Integer>();
+//		collection3.add("abc");//泛型是给编译器看的
+		collection3.getClass().getMethod("add", Object.class).invoke(collection3, "abc");
+		System.out.println(collection3.get(0));
+	}
+
+}

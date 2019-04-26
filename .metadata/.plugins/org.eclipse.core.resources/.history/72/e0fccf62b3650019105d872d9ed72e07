@@ -1,0 +1,37 @@
+package lialong;
+
+import java.io.*;
+class BufferIoTest{
+public static void main(String[] args){
+  FileReader fileReader = null;
+  BufferedReader bufferedReader = null;
+  try{
+    fileReader = new FileReader("D:/from.txt");
+    bufferedReader = new BufferedReader(fileReader,"UTF-8");
+    // 按照一行一行的读取
+    String line = null;
+    while(true){
+      line = bufferedReader.readLine();
+      if (line == null){
+        break;
+      }
+      // 打印每一行
+      System.out.println(line);
+    }
+
+  }
+  catch(Exception e){
+    System.out.println(e);
+  }
+  finally{
+    // 一定要在finally中关闭文件管道
+    try{
+      fileReader.close();
+      bufferedReader.close();
+    }
+    catch(Exception e){
+    System.out.println(e);
+    }
+  }
+}
+}

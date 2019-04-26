@@ -1,0 +1,25 @@
+package com.zy.along;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
+public class GenericTest {
+
+	public static void main(String[] args) throws Exception {
+		ArrayList<Integer> collection3 = new ArrayList<Integer>();
+//		collection3.add("abc");//泛型是给编译器看的
+		collection3.getClass().getMethod("add", Object.class).invoke(collection3, "abc");
+		System.out.println(collection3.get(0));
+		
+		
+		Collection<?> collection =null;
+		collection = new HashSet<Integer>();
+		collection.add(new Integer(1));
+		Set<Integer> set = new HashSet<Integer>();
+		set.add(new Integer(1));
+	}
+
+}

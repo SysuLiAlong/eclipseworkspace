@@ -1,0 +1,14 @@
+package lialong;
+
+public class InnerClassDemo {
+	public static void main(String[] args) {
+		
+	}
+	class Outer{
+		class innerStatic{
+			public innerStatic() {
+				System.out.println("innerStatic");
+			}
+		}
+	}
+}

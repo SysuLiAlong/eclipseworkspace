@@ -1,0 +1,17 @@
+package lialong;
+
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+
+public class HashSetDemo {
+	public static void main(String[] args) {
+		HashSet set = new HashSet<String>();
+		LinkedHashSet<String> linkedSet = new LinkedHashSet<String>();
+		int len = 5;
+		for(int i=0;i<len;i++) {
+			set.add(String.valueOf(i));
+			linkedSet.add(String.valueOf(i));
+		}
+		
+	}
+}

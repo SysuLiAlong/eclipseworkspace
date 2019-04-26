@@ -1,0 +1,16 @@
+package fastjson;
+public class Column {
+    private String key;
+    private String header;
+    private String width;
+    private String allowSort;
+    private String hidden;
+    
+    public String getKey() {
+        return key;
+    }
+    public void setKey(String key) {
+        this.key = key;
+    }
+    //这里省略部分getter与setter方法 
+}

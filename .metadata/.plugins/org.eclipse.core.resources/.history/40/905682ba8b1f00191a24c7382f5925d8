@@ -1,0 +1,22 @@
+package lialong;
+
+public class InnerClassDemo {
+	public String name = "InnerClassDemo";
+	public static void main(String[] args) {
+		InnerClassDemo innerClassDemo = new InnerClassDemo();
+		innerClassDemo.new innerClass();
+		innerStatic is = new InnerClassDemo.innerStatic();
+	}
+	public static class innerStatic{
+		public innerStatic() {
+			System.out.println("innerStatic");
+			System.out.println(name);
+		}
+	}
+	public class innerClass{
+		public innerClass() {
+			System.out.println("innerClass");
+			System.out.println(name);
+		}
+	}
+}
